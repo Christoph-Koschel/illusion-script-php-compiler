@@ -30,9 +30,9 @@ jobs:
           release_name="php8-$tag-${{ matrix.target }}"
           
           if [ "${{ matrix.target }}" == "win-x64" ]; then
-            7z a -tzip "${release_name}.zip" "./php8/bin/Debug/net5.0/*"
+            7z a -tzip "${release_name}.zip" "./build/*"
           else
-          tar czvf "${release_name}.tar.gz" "php8/bin/Debug/net5.0/*"
+          tar czvf "${release_name}.tar.gz" "build*"
           fi
 
       - name: Publish php8

@@ -3,6 +3,7 @@
     <PropertyGroup>
         <TargetFramework>net5.0</TargetFramework>
         <RootNamespace>IllusionScript.Compiler.PHP8</RootNamespace>
+        <AssemblyName>php8</AssemblyName>
     </PropertyGroup>
 
     <ItemGroup>
@@ -13,5 +14,9 @@
         <None Remove="syscall" />
         <EmbeddedResource Include="syscall.php" />
     </ItemGroup>
+    
+    <Target Name="Copy Build" AfterTargets="AfterBuild">
+        <Copy SourceFiles="$(OutDir)/php8.dll" DestinationFolder="build" />
+    </Target>
 
 </Project>
