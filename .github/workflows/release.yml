@@ -35,9 +35,9 @@ jobs:
           done
           
           if [ "${{ matrix.target }}" == "win-x64" ]; then
-            7z a -tzip "${release_name}.zip" "./build/*"
+            7z a -tzip "${release_name}.zip" "./php8/build/*"
           else
-          tar czvf "${release_name}.tar.gz" "build*"
+          tar czvf "${release_name}.tar.gz" "php8/build*"
           fi
 
       - name: Publish php8v0
