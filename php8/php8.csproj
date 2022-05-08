@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net5.0</TargetFramework>
+        <RootNamespace>IllusionScript.Compiler.PHP8</RootNamespace>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\..\Illusion Script\Runtime\Runtime.csproj" />
+    </ItemGroup>
+    
+    <ItemGroup>
+      <None Remove="syscall" />
+      <EmbeddedResource Include="syscall.php" />
+    </ItemGroup>
+
+</Project>

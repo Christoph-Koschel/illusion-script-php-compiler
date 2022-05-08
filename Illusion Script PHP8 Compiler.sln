@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "php8", "php8\php8.csproj", "{15F1391A-C2DD-42D7-963D-65D1AF32CB62}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Runtime", "..\Illusion Script\Runtime\Runtime.csproj", "{7496E0AA-729A-4283-81B3-CB21AB68356C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{15F1391A-C2DD-42D7-963D-65D1AF32CB62}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{15F1391A-C2DD-42D7-963D-65D1AF32CB62}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{15F1391A-C2DD-42D7-963D-65D1AF32CB62}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{15F1391A-C2DD-42D7-963D-65D1AF32CB62}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7496E0AA-729A-4283-81B3-CB21AB68356C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7496E0AA-729A-4283-81B3-CB21AB68356C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7496E0AA-729A-4283-81B3-CB21AB68356C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7496E0AA-729A-4283-81B3-CB21AB68356C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
