@@ -2,8 +2,6 @@
 using System.Collections.Generic;
 using System.Collections.Immutable;
 using System.IO;
-using System.Text;
-using IllusionScript.Runtime.Binding;
 using IllusionScript.Runtime.Binding.Nodes.Expressions;
 using IllusionScript.Runtime.Binding.Nodes.Statements;
 using IllusionScript.Runtime.Binding.Operators;

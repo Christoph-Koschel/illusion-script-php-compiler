@@ -8,10 +8,10 @@
     <ItemGroup>
       <ProjectReference Include="..\..\Illusion Script\Runtime\Runtime.csproj" />
     </ItemGroup>
-    
+
     <ItemGroup>
-      <None Remove="syscall" />
-      <EmbeddedResource Include="syscall.php" />
+        <None Remove="syscall" />
+        <EmbeddedResource Include="syscall.php" />
     </ItemGroup>
 
 </Project>

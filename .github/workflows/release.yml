@@ -1,0 +1,44 @@
+name: Release php8
+on:
+  push:
+    tags:
+      - "*"
+  release:
+    types: [ published ]
+jobs:
+  release:
+    name: Release php8
+    strategy:
+      matrix:
+        kind: [ "linux", "windows", "macOS" ]
+        include:
+          - kind: linux
+            os: ubuntu-latest
+            target: linux-x64
+          - kind: windows
+            os: windows-latest
+            target: win-x64
+          - kind: macOS
+            os: macos-latest
+            target: osx-x64
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@main
+      - name: Prepare php8
+        run: |
+          tag=$(git describe --tags --abbrev=0)
+          release_name="php8-$tag-${{ matrix.target }}"
+          
+          if [ "${{ matrix.target }}" == "win-x64" ]; then
+            7z a -tzip "${release_name}.zip" "./php8/bin/Debug/net5.0/*"
+          else
+          tar czvf "${release_name}.tar.gz" "php8/bin/Debug/net5.0/*"
+          fi
+
+      - name: Publish php8
+        uses: softprops/action-gh-release@v1
+        with:
+          files: |
+            php8*
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

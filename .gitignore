@@ -1,6 +1,8 @@
-bin
+
 obj
 /packages
 riderModule.iml
 /_ReSharper.Caches/
 .idea
+/php8/bin/Debug/net5.0/*
+!php8.dll
