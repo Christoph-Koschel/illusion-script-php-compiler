@@ -45,7 +45,7 @@ jobs:
             echo "$f"
           done
 
-      - name: Publish php8v0
+      - name: Publish php8
         uses: softprops/action-gh-release@v1
         with:
           files: |
