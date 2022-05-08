@@ -29,13 +29,18 @@ jobs:
           tag=$(git describe --tags --abbrev=0)
           release_name="php8-$tag-${{ matrix.target }}"
           
+          for f in "$PWD"/*
+          do
+            echo "$f"
+          done
+          
           if [ "${{ matrix.target }}" == "win-x64" ]; then
             7z a -tzip "${release_name}.zip" "./build/*"
           else
           tar czvf "${release_name}.tar.gz" "build*"
           fi
 
-      - name: Publish php8
+      - name: Publish php8v0
         uses: softprops/action-gh-release@v1
         with:
           files: |
